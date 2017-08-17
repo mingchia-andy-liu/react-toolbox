@@ -4,7 +4,7 @@ const webpackConfig = require('./webpack.config.base.js')
 const version = require('../package.json').version;
 
 module.exports = {
-    title: `React Toolkit v${version}`,
+    title: `React Toolbox v${version}`,
     serverPort: 4000,
     require: [
         path.resolve(ROOT_DIR, 'src/styles/styles.scss'),

@@ -1,14 +1,9 @@
 var webpack = require('webpack');
 var path = require('path');
 var ROOT_DIR = process.cwd();
-
-var entryPath = path.resolve(ROOT_DIR, 'src/app.jsx');
 var outputPath = path.resolve(ROOT_DIR, 'build')
 
 var config = {
-    entry: [
-        entryPath
-    ],
     output: {
         filename: '[name].js',
         path: outputPath
