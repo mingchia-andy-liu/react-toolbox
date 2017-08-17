@@ -102,3 +102,5 @@ typings/
 .history
 
 # End of https://www.gitignore.io/api/node,sass,macos,visualstudiocode
+
+/config/styleguide/*

@@ -1,0 +1,12 @@
+.u-ripple {
+    animation: ripple 1000ms ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba($color-secondary, 0.5),
+    }
+    100% {
+        box-shadow: 0 0 0 0.8em rgba($color-secondary, 0),
+    }
+}

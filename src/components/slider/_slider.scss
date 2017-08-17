@@ -1,0 +1,89 @@
+@import "../../styles/settings/variables";
+
+$slider-base: 18px;
+$slider-height: 2px;
+$slider-scale: 1.5;
+
+.c-slider-bar {
+    margin-top: 15px;
+    height: 15px;
+}
+
+.c-slider-rail {
+    height: $slider-height;
+    background-color: $color-grey-85;
+    display: flex;
+    flex-direction: row;
+}
+
+.c-slider-rail::after {
+    content: "";
+    width: $slider-height;
+    height: $slider-height;
+    background-color: $color-grey-30;
+    border-radius: 50%;
+}
+
+.c-slider-progress {
+    position: relative;
+    max-width: inherit;
+    top: -$slider-height;
+    height: $slider-height;
+    background-color: $color-secondary;
+    z-index: 1;
+}
+
+.c-slider-progress__knob{
+    position: relative;
+    left: 100%;
+    top: -11px;
+    border-radius: 50%;
+    height: $slider-base;
+    width: $slider-base;
+    background-color: $color-secondary;
+    z-index: 2;
+    transition: transform 200ms ease-in-out;
+}
+
+.c-slider-progress__knob.c--active {
+    transform: scale($slider-scale);
+}
+
+.c-slider-value {
+    position: relative;
+    width: $slider-base;
+    height: $slider-base;
+    top: -27px;
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+    font-size: 11px;
+}
+
+.c-slider-value.c--active {
+    font-size: 15px;
+    top: -28px;
+}
+
+.c-slider-text {
+    position: relative;
+}
+
+.c-slider-rail-snap {
+    flex: 1;
+    background-color: $color-grey-85;
+}
+
+.c-slider-rail-snap::after {
+    display: block;
+    content: "";
+    width: $slider-height;
+    height: $slider-height;
+    background-color: $color-grey-30;
+    border-radius: 50%;
+}
+
+.c-slider-rail-snap__text {
+    position: absolute;
+    transform: translateX(-50%);
+}
