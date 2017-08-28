@@ -26,7 +26,7 @@ $color-map: (
 
 @each $color in $colors {
     // Actual border changes the size of the button.
-    // Box-shadow gives a "free" border using the text color.
+    // Box-shadow gives a "free" border using the color.
     .c-button.c-button--#{$color} {
         color: #fff;
         background-color: map-get($color-map, $color);
