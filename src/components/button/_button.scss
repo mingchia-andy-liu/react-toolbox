@@ -21,12 +21,12 @@ $color-map: (
     text-align: center;
     text-decoration: none;
     color: $color-text;
-    transition: background .3s;
+    transition: background-color .3s;
 }
 
 @each $color in $colors {
     // Actual border changes the size of the button.
-    // Using box-shadow gives a pseudo border using the color.
+    // Box-shadow gives a "free" border using the text color.
     .c-button.c-button--#{$color} {
         color: #fff;
         background-color: map-get($color-map, $color);
