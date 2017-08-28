@@ -5,6 +5,7 @@ $spacing-directions: (top, right, bottom, left);
 $spacing-sizes: (xs, s, m, l, xl);
 
 $base-px-unit: 5px;
+$min-tap-target-size: 44px;
 $spacing__map: (
     xs: $base-px-unit,
     sm: $base-px-unit * 2,

@@ -1,0 +1,59 @@
+@import "../../styles/settings/variables";
+
+$colors: (primary, secondary, danger);
+$color-map: (
+    primary: $color-primary,
+    secondary: $color-secondary,
+    danger: $color-danger
+);
+
+.c-button {
+    width: 100%;
+    min-height: $min-tap-target-size;
+    min-width: $min-tap-target-size;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: transparent;
+    margin: 0.5rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: $color-text;
+    transition: background .3s;
+}
+
+@each $color in $colors {
+    // Actual border changes the size of the button.
+    // Using box-shadow gives a pseudo border using the color.
+    .c-button.c-button--#{$color} {
+        color: #fff;
+        background-color: map-get($color-map, $color);
+
+        &:hover {
+            color: map-get($color-map, $color);
+            background-color: #fff;
+            box-shadow: 0 0 0 1px;
+        }
+    }
+
+    .c-button--#{$color}.c-button--inverse {
+        color: map-get($color-map, $color);
+        background-color: transparent;
+        box-shadow: 0 0 0 1px;
+
+        &:hover {
+            color: #fff;
+            background-color: map-get($color-map, $color);
+            box-shadow: none;
+        }
+    }
+}
+
+.c-button.c-button--disabled {
+    color: #fff;
+    background-color: $color-grey-50;
+    box-shadow: none;
+    cursor: not-allowed;
+}
