@@ -19,7 +19,7 @@ const getClassName = (className, inverse, disabled, theme) => {
     return names
 }
 
-const Button = ({ className, label, type, disabled, inverse, theme }) => {
+const Button = ({ className, label, type, disabled, inverse, theme, ...rest }) => {
     return (
         <button
             className={getClassName(className, inverse, disabled, theme)}
