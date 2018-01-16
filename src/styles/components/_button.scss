@@ -1,5 +1,3 @@
-@import "../../styles/settings/variables";
-
 $colors: (primary, secondary, danger);
 $color-map: (
     primary: $color-primary,
@@ -21,7 +19,7 @@ $color-map: (
     text-align: center;
     text-decoration: none;
     color: $color-text;
-    transition: background .3s;
+    transition: background-color .3s;
 }
 
 @each $color in $colors {

@@ -1,7 +1,7 @@
 const ROOT_DIR = process.cwd()
 const path = require('path')
 const webpackConfig = require('./webpack.config.base.js')
-const version = require('../package.json').version;
+const version = require('../package.json').version
 
 module.exports = {
     title: `React Toolbox v${version}`,

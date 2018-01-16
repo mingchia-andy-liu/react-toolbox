@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import _ from 'lodash'
 
-import './_slider.scss'
-
 /**
  * ```jsx
  * import Slider from 'components/slider'

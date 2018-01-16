@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import './_button.scss'
-
 const getClassName = (className, inverse, disabled, theme) => {
     const names = classNames(
         'c-button',
@@ -19,11 +17,12 @@ const getClassName = (className, inverse, disabled, theme) => {
     return names
 }
 
-const Button = ({ className, label, type, disabled, inverse, theme }) => {
+const Button = ({ className, label, type, disabled, inverse, theme, ...rest }) => {
     return (
         <button
             className={getClassName(className, inverse, disabled, theme)}
             type={type}
+            {...rest}
         >
             <span>{label}</span>
         </button>

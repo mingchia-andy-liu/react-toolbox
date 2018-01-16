@@ -1,9 +1,9 @@
 // Base Files
-@import "settings/variables";
+@import "global/variables";
 
 // Components
-@import "../components/slider/slider";
-@import "../components/button/button";
+@import "components/slider";
+@import "components/button";
 
 // Util
 @import "util/flex";
