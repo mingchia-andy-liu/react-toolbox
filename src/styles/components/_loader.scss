@@ -1,0 +1,25 @@
+.c-loader {
+    width: 50px;
+    height: 50px;
+    border:5px solid $color-secondary;
+    -webkit-animation: spin 1.5s infinite linear;
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin{
+    0%{
+        transform:rotate(0deg)
+    }
+    to{
+        transform:rotate(1turn)
+    }
+}
+
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform:rotate(0deg)
+    }
+    to{
+        -webkit-transform:rotate(1turn)
+    }
+}
