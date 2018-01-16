@@ -7,7 +7,12 @@ class Tabs extends Component {
     constructor(props) {
         super(props)
 
-        const { children, startIndex } = this.props
+        // this.props.children is an opaque data structure. It can be either an array or a single element.
+        let { children, startIndex } = this.props
+        if (!children) {
+            throw Error('Must contain at least one tab')
+        }
+        children = Array.isArray(children) ? children : [children]
         const index = startIndex > children.length ? 0 : startIndex
         this.state = {
             selectedIndex: index,
@@ -23,7 +28,9 @@ class Tabs extends Component {
     }
 
     renderTabs() {
-        return this.props.children.map((item, index) => (
+        let children = this.props.children
+        children = Array.isArray(children) ? children : [children]
+        return children.map((item, index) => (
             <Tab
                 key={`tab-bar-item-${index}`}
                 active={this.state.selectedIndex === index}

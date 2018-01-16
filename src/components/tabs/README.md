@@ -1,6 +1,6 @@
 ### Example
 
-You can add as many tabs as you would like, the bottom sliding line will adjust accordingly. Must be greater than 0.
+You can add as many tabs as you would like, the bottom sliding line will adjust accordingly. Must contain 1 tab.
 
 #### Basic Usage
 ```jsx
