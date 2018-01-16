@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import './_button.scss'
-
 const getClassName = (className, inverse, disabled, theme) => {
     const names = classNames(
         'c-button',
