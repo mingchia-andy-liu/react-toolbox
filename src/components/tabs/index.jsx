@@ -7,8 +7,10 @@ class Tabs extends Component {
     constructor(props) {
         super(props)
 
+        const { children, startIndex } = this.props
+        const index = startIndex > children.length ? 0 : startIndex
         this.state = {
-            selectedIndex: this.props.startIndex,
+            selectedIndex: index,
         }
     }
 

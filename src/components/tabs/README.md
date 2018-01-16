@@ -1,5 +1,7 @@
 ### Example
 
+You can add as many tabs as you would like, the bottom sliding line will adjust accordingly. Must be greater than 0.
+
 #### Basic Usage
 ```jsx
 const AccordionItem = require('./index').Tab;
